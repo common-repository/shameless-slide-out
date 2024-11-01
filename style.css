@@ -1,0 +1,238 @@
+.slidein-outer.slidein-pos-right
+{
+    position: fixed;
+    top: 150px;
+    height: 50px;
+    z-index: 100;
+    right: -450px;
+    transition: all 0.5s;
+}
+
+.slidein-outer.slidein-pos-left
+{
+	position: fixed;
+	top: 150px;
+	height: 50px;
+	z-index: 100;
+	left: -450px;
+	transition: all 0.5s;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.slidein-outer.slidein-pos-top
+{
+	position: fixed;
+	top: 0px;
+	height: 50px;
+	z-index: 100;
+	transition: all 0.5s;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	align-items: center;
+}
+
+.slidein-outer.slidein-sticky-disabled
+{
+	position: absolute;
+}
+
+.slidein-outer.slidein-pos-top.open
+{
+	top: 200px;
+}
+
+.slidein-outer.slidein-pos-right.open
+{
+    right: 0;
+}
+
+.slidein-outer.slidein-pos-left.open
+{
+	left: 0;
+}
+
+a.listen
+{
+	display: block;
+	border-radius: 10px;
+	padding: 5px;
+	width: 160px;
+	text-align: center;
+	transition: all 0.25s;
+}
+
+.slidein-tab
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: always;
+	cursor: pointer;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slidein-pos-right .slidein-tab
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.slidein-pos-left .slidein-tab
+{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.slidein-pos-top .slidein-tab
+{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.slidein-pos-right .slidein-inner
+{
+    position: absolute;
+    top: 0;
+    left: 100px;
+    border-bottom-left-radius: 10px;
+}
+
+.slidein-pos-left .slidein-inner
+{
+	top: 0;
+	left: 0px;
+	border-bottom-right-radius: 10px;
+}
+
+.slidein-inner
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	border-right: none;
+	background-color: #8bccf0;
+	color: white;
+	padding: 10px;
+	overflow-y: auto;
+}
+
+.slidein-inner h3
+{
+	font-size: 24px;
+	color: black;
+	margin-bottom: 0;
+}
+
+
+.slidein-inner p
+{
+	font-size: 16px;
+	color: black
+}
+
+p.subtitle
+{
+	font-size: 12px;
+	color: #444;
+}
+
+@media only screen and (max-width: 570px)
+{
+	.slidein-outer.slidein-pos-right
+	{
+			position: fixed;
+			right: 0px !important;
+			bottom: 50px;
+			top: initial !important;
+			width: 350px;
+	}
+
+	.slidein-outer.slidein-pos-left
+	{
+		position: fixed;
+		left: 0 !important;
+		bottom: 50px;
+		top: initial !important;
+		width: 350px;
+		flex-direction: row !important;
+	}
+
+	.slidein-outer.slidein-pos-left.open
+	{
+			bottom: 370px;
+			left: 0;
+	}
+
+	.slidein-outer.slidein-pos-right.open
+	{
+		bottom: 370px;
+		right: 0;
+	}
+	
+	.slidein-pos-right .slidein-tab
+	{
+		float: right;
+		pointer-events: always;
+		cursor: pointer;
+		display: block;
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		border-top-left-radius: 10px !important;
+		border-top-right-radius: 0 !important;
+	  	border-bottom-left-radius: 0 !important;
+	}
+
+	.slidein-pos-left .slidein-tab
+	{
+		pointer-events: always;
+		cursor: pointer;
+		display: block;
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 0 !important;
+	}
+
+	.slidein-pos-left .slidein-inner
+	{
+		border-top-right-radius: 10px;
+	}
+
+	.slidein-pos-right .slidein-inner
+	{
+		border-top-left-radius: 10px;
+	}
+
+	.slidein-inner
+	{
+			border-bottom: none;
+			background-color: #8bccf0;
+			color: white;
+			width: 350px !important;
+			height: 350px !important;
+			position: absolute;
+			top: 100px !important;
+			left: 0 !important;
+			padding: 10px;
+	}
+
+	.slidein-inner h3
+	{
+		font-size: 24px;
+		color: black;
+		margin-bottom: 0;
+	}
+
+
+	.slidein-inner p
+	{
+		font-size: 16px;
+		color: black
+	}
+}
